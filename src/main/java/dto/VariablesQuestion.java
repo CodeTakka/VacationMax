@@ -1,6 +1,6 @@
 package dto;
 
-public class variables {
+public class VariablesQuestion {
     private int days;
     private double budget;
     private double flightCost;

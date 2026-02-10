@@ -10,11 +10,11 @@ public class VariablesBehind {
     private double totalCost;
     private String VacationStatus;
 
+
     private HashMap<String, Double> costDetail;
     private List<String> suggestions;
 
-    public VariablesBehind (String VacationStatus, double budgetGap, double totalCost, HashMap<String, Double> costDetail,List<String> suggestions){
-        this.VacationStatus = VacationStatus;
+    public VariablesBehind (String VacationStatus, double budgetGap, double totalCost){
         this.budgetGap = budgetGap;
         this.totalCost = totalCost;
         this.costDetail = costDetail;

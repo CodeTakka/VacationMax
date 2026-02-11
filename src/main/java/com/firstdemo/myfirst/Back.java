@@ -1,9 +1,10 @@
-package Service;
+package com.firstdemo.myfirst;
 
 import dto.VariablesBehind;
 import dto.VariablesQuestion;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class Back {
 
     public VariablesBehind evaluate(VariablesQuestion request) {
@@ -22,17 +23,17 @@ public class Back {
         }
 
         double flightCost = request.getFlightCost();
-        if (flightCost <= 0) {
+        if (flightCost < 0) {
             throw new IllegalArgumentException("Cost of flight cannot be less than zero");
         }
 
         double nightCost = request.getNightCost();
-        if (nightCost <= 0) {
+        if (nightCost < 0) {
             throw new IllegalArgumentException("Cost per night cannot be less than zero");
         }
 
         double night = nightCost * days;
-        double flight = flightCost * days;
+        double flight = flightCost;
         double food = request.getFoodCost() * days;
         double activities = request.getActivitiesCost() * days;
         double transportCost = request.getTransportCost() * days;
